@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api':{  //对所有以” api 开头 url 做处理。
-        target:'http://siwei.mei', //）把新的 rl 请求转发到 si we me 上。
+        target:'http://siwei.me', //）把新的 rl 请求转发到 si we me 上。
         changeOrigin:true,
         pathRewrite:{
           '^/api':''  //）把 url 中的 pi 去掉。
