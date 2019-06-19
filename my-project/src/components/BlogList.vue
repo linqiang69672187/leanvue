@@ -1,5 +1,6 @@
 <template>
     <div>
+      <my-logo title="博客列表页"></my-logo>
         <table>
             <tr v-for="(blog, index) in blogs" :key="index">
                 <td @click="show_blog(blog.id)"><router-link :to="{name:'blog',query:{id:blog.id}}">{{blog.title}}</router-link></td>
@@ -10,6 +11,7 @@
     </div>
 </template>
 <script>
+import MyLogo from '@/components/Logo'
 export default {
   data () {
     return {
@@ -17,6 +19,9 @@ export default {
       blogs: []
     }
   },
+  components:{
+    MyLogo:MyLogo 
+  },//前面的 MyLogo template 中的名字，后面的 MyLogo 是import 进来的代码
   mounted () {
      this.$http.get('api/interface/blogs/all').then((response) => {
       console.info(response.body)

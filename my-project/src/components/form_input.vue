@@ -40,6 +40,11 @@ export default {
                 {text:'水煮活鱼',value:'C'},
             ]
         }
+    },
+    watch:{
+        select_value:function(newtile){
+            alert(newtile)
+        }
     }
 }
 </script>
